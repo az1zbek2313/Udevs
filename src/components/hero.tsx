@@ -13,11 +13,11 @@ const Hero = () => {
   useEffect(() => {
     const typewriter = new Typewriter("#typewriter", {
       strings: [
-        `${t("mobileApp")}`,
-        `${t("erpSystem")}`,
-        `${t("design")}`,
-        `${t("consult")}`,
-        `${t("infrastructure")}`,
+        t("mobileApp"),
+        t("erpSystem"),
+        t("design"),
+        t("consult"),
+        t("infrastructure"),
       ],
       autoStart: true,
       loop: true,
@@ -25,7 +25,7 @@ const Hero = () => {
     });
 
     typewriter.pauseFor(1000).start();
-  }, []);
+  }, [t]);
 
   return (
     <main id="hero" className="pt-16 w-full md:h-[700px] backgroundImage">

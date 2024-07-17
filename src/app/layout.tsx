@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import Navbar from "@/components/navbar";
 import "./globals.css";
 import "@/Languages/i18n";
 import dynamic from "next/dynamic";
 import AbsaluteImage from "@/components/absaluteImage";
 import Providers from "./GlobalRedux/provider";
-
-const manrope = Manrope({ subsets: ["latin"], display: "swap", weight: "500" });
 
 export const metadata: Metadata = {
   title: "UzDevs",
@@ -25,7 +22,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${manrope.className} relative`}>
+      <body className="font-manrope relative">
         <Providers>
           <Navbar />
         </Providers>
