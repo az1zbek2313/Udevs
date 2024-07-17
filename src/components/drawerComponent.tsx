@@ -2,7 +2,7 @@
 
 interface ToggleType {
   toggleBars: boolean;
-  setToggleBars: any;
+  setToggleBars: (toggle: boolean) => void;
 }
 
 import relogo from "@/../public/ReLogo.png";
@@ -16,7 +16,7 @@ const DrawerComponent = ({ toggleBars, setToggleBars }: ToggleType) => {
 
   const handleChange = () => {
     if (textRef.current?.value) {
-      setHave(textRef.current?.value!);
+      setHave(textRef.current?.value as string);
     } else {
       setHave(null);
     }
@@ -49,7 +49,7 @@ const DrawerComponent = ({ toggleBars, setToggleBars }: ToggleType) => {
         </div>
         <button
           type="button"
-          onClick={() => setToggleBars(false)}
+          onClick={() => {setToggleBars(false)}}
           data-drawer-hide="drawer-right-example"
           aria-controls="drawer-right-example"
           className="text-gray-400 bg-transparent cursor-pointery hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"

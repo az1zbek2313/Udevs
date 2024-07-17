@@ -24,18 +24,18 @@ const Tools = () => {
   const {t} = useTranslation();
 
   const handleChange = () => {
-    setFrontend(frontendRef.current?.checked!);
-    setBackend(backendRef.current?.checked!);
-    setDevops(devopsRef.current?.checked!);
-    setTesting(testingRef.current?.checked!);
-    setDesign(uxRef.current?.checked!);
-    setInfrastructure(InfrastructureRef.current?.checked!);
-    setMobile(mobileRef.current?.checked!);
+    setFrontend(frontendRef.current?.checked as boolean);
+    setBackend(backendRef.current?.checked as boolean);
+    setDevops(devopsRef.current?.checked as boolean);
+    setTesting(testingRef.current?.checked as boolean);
+    setDesign(uxRef.current?.checked as boolean);
+    setInfrastructure(InfrastructureRef.current?.checked as boolean);
+    setMobile(mobileRef.current?.checked as boolean);
   };
 
-  const handleClick = (e:any) => {
+  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (frontend || backend || devops || testing || design || Infrastructure || mobile) {
-      // all tools view
+      // Reset all state variables
       setFrontend(false);
       setBackend(false);
       setDevops(false);
@@ -43,13 +43,12 @@ const Tools = () => {
       setDesign(false);
       setInfrastructure(false);
       setMobile(false);
-      // radio button false 
-      if (e.target.checked) {
-        e.target.checked = false;
-      } 
+  
+      // Uncheck the clicked radio button
+      e.target.checked = false;
     }
   };
-
+  
   return (
     <div id="tools" className="ww:py-20 py-4 w-full bg-background">
       <div className={`${styles.container}`}>
@@ -65,7 +64,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={frontendRef}
                 id="red-radio"
                 type="radio"
@@ -83,7 +82,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={backendRef}
                 id="green-radio"
                 type="radio"
@@ -101,7 +100,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={devopsRef}
                 id="purple-radio"
                 type="radio"
@@ -119,7 +118,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={testingRef}
                 id="teal-radio"
                 type="radio"
@@ -139,7 +138,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={uxRef}
                 id="yellow-radio"
                 type="radio"
@@ -157,7 +156,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={InfrastructureRef}
                 id="orange-radio"
                 type="radio"
@@ -175,7 +174,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={handleClick}
+                onClick={() => {handleClick}}
                 ref={mobileRef}
                 id="pink-radio"
                 type="radio"

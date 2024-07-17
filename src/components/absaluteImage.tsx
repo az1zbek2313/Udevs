@@ -1,7 +1,6 @@
 "use client";
 
 import { styles } from "@/utils/page";
-import Link from "next/link";
 import { useState } from "react";
 import DrawerComponent from "./drawerComponent";
 
@@ -12,7 +11,7 @@ const AbsaluteImage = () => {
     <div className="fixed z-50 bottom-[30px] right-0">
       <div className={`${styles.container}`}>
         <span
-          onClick={() => setToggleBars(true)}
+          onClick={() => {setToggleBars(true)}}
           className="w-[56px] h-[56px] bg-absaluteIcon flex rounded-[40%] cursor-pointer"
         >
           <svg
