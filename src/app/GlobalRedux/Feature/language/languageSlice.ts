@@ -1,9 +1,7 @@
 'use client';
 
-const local = localStorage?.getItem('lang') ? JSON.parse(localStorage?.getItem('lang') as string) : 'en';
-
 import { createSlice } from "@reduxjs/toolkit";
-const initialState = {value: local}
+const initialState = {value: 'en'}
 
 export const languageSlice = createSlice({
     name:'language',
