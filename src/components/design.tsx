@@ -1,3 +1,5 @@
+'use client';
+
 import { DesignCards } from "@/functions/page";
 import { DesignTechnologiesCards } from "@/functions/page";
 import { styles } from "@/utils/page";

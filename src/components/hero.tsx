@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import heroImage from "@/../public/heroImage.svg";
 import Typewriter from "typewriter-effect/dist/core";

@@ -1,3 +1,5 @@
+'use client';
+
 import { ImanCards } from "@/functions/page";
 import { styles } from "@/utils/page";
 import Image from "next/image";

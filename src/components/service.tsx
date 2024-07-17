@@ -1,3 +1,5 @@
+'use client';
+
 import { styles } from "@/utils/page";
 import Image from "next/image";
 import { ServiceCards } from "@/functions/page";
