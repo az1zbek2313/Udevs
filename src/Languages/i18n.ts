@@ -4,7 +4,7 @@ import { russianLanguage } from "@/Languages/changeLanguage/Russian";
 import { englishLanguage } from "@/Languages/changeLanguage/English";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-const local = localStorage.getItem("lang") ? JSON.parse(localStorage.getItem("lang")) : 'en';
+const local = localStorage?.getItem("lang") ? JSON.parse(localStorage?.getItem("lang") as string) : 'en';
 
 const resources = {
   en: {
