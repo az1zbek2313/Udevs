@@ -19,7 +19,7 @@ const Clients = () => {
       <Marquee speed={10} className="sm:h-[150px] h-[120px] sm:my-6">
         <div className="flex gap-3 sm:gap-6 w-full h-full">
           {FirstClient.map((el) => (
-           <div className="hidden sm:inline-block transition-all duration-500 hover:scale-110">
+           <div key={el.id} className="hidden sm:inline-block transition-all duration-500 hover:scale-110">
              <Image
               width={210}
               height={126}
@@ -32,7 +32,7 @@ const Clients = () => {
            </div>
           ))}
           {FirstClient.map((el) => (
-           <div className="sm:hidden inline-block transition-all duration-500 hover:scale-110">
+           <div key={el.id} className="sm:hidden inline-block transition-all duration-500 hover:scale-110">
              <Image
               width={130}
               height={95}
@@ -49,7 +49,7 @@ const Clients = () => {
       <Marquee speed={10} direction="right" className="sm:h-[150px] h-[120px] sm:my-6">
         <div className="flex gap-3 sm:gap-6 w-full h-full">
         {SecondClient.map((el) => (
-           <div className="hidden sm:inline-block transition-all duration-500 hover:scale-110">
+           <div key={el.id} className="hidden sm:inline-block transition-all duration-500 hover:scale-110">
              <Image
               width={210}
               height={126}
@@ -62,7 +62,7 @@ const Clients = () => {
            </div>
           ))}
           {SecondClient.map((el) => (
-           <div className="sm:hidden inline-block  transition-all duration-500 hover:scale-110">
+           <div key={el.id} className="sm:hidden inline-block  transition-all duration-500 hover:scale-110">
              <Image
               width={130}
               height={95}
