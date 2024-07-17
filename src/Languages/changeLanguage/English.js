@@ -1,0 +1,58 @@
+export const englishLanguage = {
+  direction: "Direction",
+  command: "Command",
+  services: "Services",
+  tools: "Tools",
+  clients: "Clients",
+  ourClients: "Our clients",
+  portfolio: "Portfolio",
+  language: "Language",
+  contact: "Contact",
+  mobileApp: "Development of mobile applications",
+  erpSystem: "Development and implementation ERP systems",
+  design: "User interface, User experience design",
+  consult: "IT consulting",
+  infrastructure: "Optimization IT consulting infrastructure",
+  heroCompany: "IT-Outsourcing Company",
+  ourServices: "Our Services",
+  team: "Team",
+  teamText:
+    "For each project, we form a team that includes a project manager, business analyst, UI / UX designer, DevOps, QA engineer, backend and front-end developers.",
+  deticted: "Dedicated team",
+  mobileAppText:
+    "In collaboration with startups, we have learned how to create a creative and functional user interface for mobile applications.",
+  technologies: "Technologies",
+  optimization:"Optimization",
+  infra:"Infrastructure",
+  erpSystemText:
+    "IT Systems of any level of complexity at a convenient time for you",
+  designText: "Our company takes a human-centered approach to design",
+  infrastructureText:
+    "Our experienced professionals will help you optimize your infrastructure",
+  consultText:
+    "We can improve the qualifications of your employees thereby increasing the efficiency of your company",
+  deleverText:
+    "Delever - Delivery service automation targeted at both consumers and restaurants.",
+  smsuzText: "Smsuz.uz - It is a platform for bulk SMS messaging.",
+  goodzoneText:
+    "Goodzone - Internet shop of household appliances in Uzbekistan.",
+  imanText:
+    "Iman - It is a mutual financing platform based on the principles of Islamic Finance. Buyers, sellers and investors meet here.",
+  wedid: "What we did?",
+  work: "How we work!",
+  workContactText: "Send us your project request or project idea.",
+  workAnalysisText: "We will contact you to clarify your project requirements.",
+  workOfferText: "We will provide you with our free, non-binding application.",
+  workTeamText: "We provide a team for your requirements.",
+  workStartText: "You will get to know the team and we'll get started.",
+  analysis: "Analysis",
+  offer: "Offer",
+  start: "Start",
+  contactus: "Contact us",
+  message: "Leave us a message",
+  name: "Name",
+  email: "Your Email",
+  yourProject: "Briefly describe your project",
+  send: "Send",
+  about: "About us",
+};
