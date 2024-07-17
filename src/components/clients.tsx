@@ -1,3 +1,5 @@
+'use client';
+
 import Marquee from "react-fast-marquee";
 import { styles } from "@/utils/page";
 import { FirstClient, SecondClient } from "@/functions/page";
