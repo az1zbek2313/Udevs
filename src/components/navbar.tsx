@@ -85,11 +85,9 @@ function Navbar() {
 
         {/* <!-- drawer component --> */}
         <div
-          id="drawer-right-example"
           className={`fixed transition-all duration-200 ${
             !toggleBars ? "hidden" : "lg:hidden"
           } top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-slate-100 dark:bg-gray-800 w-full`}
-          aria-labelledby="drawer-right-label"
         >
           <Link
             href="/"
@@ -100,8 +98,6 @@ function Navbar() {
           <button
             type="button"
             onClick={() => setToggleBars(!toggleBars)}
-            data-drawer-hide="drawer-right-example"
-            aria-controls="drawer-right-example"
             className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
           >
             <svg
@@ -145,6 +141,7 @@ function Navbar() {
             <Link
               href={"#contact"}
               type="button"
+              onClick={() => setToggleBars(!toggleBars)}
               className="block text-white mr-8 w-full bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-lg"
             >
               {t('contact')}

@@ -1,6 +1,7 @@
 "use client";
 
 import { styles } from "@/utils/page";
+import { MouseEventHandler } from 'react';
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { allTools } from "@/functions/page";
@@ -33,7 +34,8 @@ const Tools = () => {
     setMobile(mobileRef.current?.checked as boolean);
   };
 
-  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleClick: MouseEventHandler<HTMLInputElement> = (e) => {
+
     if (frontend || backend || devops || testing || design || Infrastructure || mobile) {
       // Reset all state variables
       setFrontend(false);
@@ -44,8 +46,9 @@ const Tools = () => {
       setInfrastructure(false);
       setMobile(false);
   
-      // Uncheck the clicked radio button
-      e.target.checked = false;
+      if (e.currentTarget.checked) {
+        e.currentTarget.checked = false;
+      }
     }
   };
   
@@ -64,7 +67,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={frontendRef}
                 id="red-radio"
                 type="radio"
@@ -82,7 +85,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={backendRef}
                 id="green-radio"
                 type="radio"
@@ -100,7 +103,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={devopsRef}
                 id="purple-radio"
                 type="radio"
@@ -118,7 +121,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={testingRef}
                 id="teal-radio"
                 type="radio"
@@ -138,7 +141,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={uxRef}
                 id="yellow-radio"
                 type="radio"
@@ -156,7 +159,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={InfrastructureRef}
                 id="orange-radio"
                 type="radio"
@@ -174,7 +177,7 @@ const Tools = () => {
             <div className="flex items-center me-4">
               <input
                 onChange={handleChange}
-                onClick={() => {handleClick}}
+                onClick={handleClick}
                 ref={mobileRef}
                 id="pink-radio"
                 type="radio"

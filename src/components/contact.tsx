@@ -6,12 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-interface ValidateType {
-  name: string | undefined;
-  email: string | undefined;
-  text: string | undefined;
-}
+import ValidateType from "@/types/type";
 
 const Contact = () => {
   const nameRef = useRef<HTMLInputElement>(null);

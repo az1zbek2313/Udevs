@@ -10,4 +10,5 @@ declare module 'typewriter-effect/dist/core' {
   
     export default Typewriter;
   }
+
   

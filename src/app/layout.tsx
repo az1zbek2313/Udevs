@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
 import "./globals.css";
 import "@/Languages/i18n";
 import dynamic from "next/dynamic";
-import AbsaluteImage from "@/components/absaluteImage";
-import Providers from "./GlobalRedux/provider";
 
+const newLocal = "IT-Outsourcing Company";
 export const metadata: Metadata = {
   title: "UzDevs",
-  description: "IT-Outsourcing Company",
+  description: newLocal,
 };
 
 export default function RootLayout({
@@ -16,7 +14,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const Navbar = dynamic(() => import("@/components/navbar"), {
+    ssr: false,
+  });
   const FooterComponent = dynamic(() => import("@/components/footer"), {
+    ssr: false,
+  });
+  const AbsaluteImage = dynamic(() => import("@/components/absaluteImage"), {
+    ssr: false,
+  });
+  const Providers = dynamic(() => import("./GlobalRedux/provider"), {
     ssr: false,
   });
 
